@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chhapiya Mineral Water - Official</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Chhapiya Mineral Water - Pure, refreshing mineral water delivered to your doorstep." />
+  <meta name="keywords" content="mineral water, Chhapiya, clean water, bottled water, hydration" />
+  <meta name="author" content="Chhapiya Mineral Water Company" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      color: #004d40;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #00796b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #004d40;
+      outline: none;
+    }
+
+    /* Container max width */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 40px;
+    }
+
+    /* Fixed top-right logo */
+    .logo-corner {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 180px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00796b88;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 12px;
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .logo-corner:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #004d40cc;
+    }
+
+    /* Hero Section */
+    header.hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      user-select: text;
+      padding: 0 20px;
+    }
+    header.hero h1 {
+      font-weight: 900;
+      font-size: 4rem;
+      letter-spacing: 0.15em;
+      color: #00695c;
+      text-shadow:
+        0 0 8px #004d40aa;
+      margin-bottom: 10px;
+    }
+    header.hero p.subtitle {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+      color: #004d40dd;
+    }
+    header.hero .btn-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      padding: 16px 40px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      background: #00796b;
+      color: #e0f2f1;
+      border: 2px solid #004d40;
+      box-shadow: 0 0 15px #004d40aa;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      user-select: none;
+    }
+    .btn:hover, .btn:focus {
+      background-color: #004d40;
+      color: #a7ffeb;
+      outline: none;
+      box-shadow: 0 0 25px #00796bcc;
+    }
+
+    /* Section Titles */
+    section h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #00796b;
+      user-select: text;
+      text-shadow: 0 0 6px #004d40aa;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background: #b2dfdb;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #004d4066;
+      margin-bottom: 60px;
+      user-select: text;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonial-slider {
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonial-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 20px;
+    }
+    .testimonial-item {
+      background: #004d40;
+      padding: 25px 30px;
+      border-radius: 20px;
+      color: #a7ffeb;
+      font-style: italic;
+      flex: 0 0 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 180px;
+      box-shadow: 0 0 12px #004d4088;
+    }
+    .testimonial-item p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+    .testimonial-item h4 {
+      font-weight: 700;
+      color: #e0f2f1;
+      font-style: normal;
+      text-align: right;
+      font-size: 1.15rem;
+      user-select: text;
+    }
+    .testimonial-controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .testimonial-btn {
+      cursor: pointer;
+      background: #00796b;
+      border: none;
+      padding: 8px 14px;
+      margin: 0 5px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #004d4088;
+      color: #e0f2f1;
+      font-weight: 700;
+      font-size: 1.2rem;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .testimonial-btn:hover {
+      background: #004d40;
+      box-shadow: 0 0 12px #00796bcc;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+    .gallery-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #004d4088;
+    }
+    .gallery-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 15px;
+    }
+    .gallery-item {
+      flex: 0 0 280px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00796b99;
+      background: white;
+      user-select: none;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-controls {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .gallery-btn {
+      cursor: pointer;
+      background: #00796b;
+      border: none;
+      padding: 8px 14px;
+      margin: 0 7px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #004d4088;
+      color: #e0f2f1;
+      font-weight: 700;
+      font-size: 1.2rem;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .gallery-btn:hover {
+      background: #004d40;
+      box-shadow: 0 0 12px #00796bcc;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #004d40;
+      padding: 50px 40px;
+      border-radius: 20px;
+      color: #b2dfdb;
+      margin-bottom: 60px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact h2 {
+      color: #a7ffeb;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .contact-content {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .contact-info, .contact-map {
+      flex: 1 1 450px;
+      min-width: 300px;
+    }
+    .contact-info h3 {
+      color: #a7ffeb;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .contact-info p, .contact-info a {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: #b2dfdb;
+      user-select: text;
+      display: block;
+    }
+    .contact-info a:hover, .contact-info a:focus {
+      color: #e0f7fa;
+      outline: none;
+    }
+    /* Map iframe styling */
+    .contact-map iframe {
+      width: 100%;
+      height: 350px;
+      border-radius: 20px;
+      border: none;
+      box-shadow: 0 0 25px #004d4088;
+      user-select: none;
+    }
+
+    /* Misc Section */
+    .misc {
+      padding: 40px 30px;
+      background: #00796b;
+      border-radius: 20px;
+      color: #b2dfdb;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      user-select: text;
+      margin-bottom: 60px;
+    }
+    .misc h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #b2dfdb;
+      text-align: center;
+    }
+    .misc p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .misc ul {
+      list-style-type: disc;
+      margin-left: 40px;
+      font-size: 1.1rem;
+      color: #a7ffeb;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 1rem;
+      color: #004d4088;
+      user-select: none;
+      border-top: 1px solid #004d4088;
+      background: #b2dfdb;
+      font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header.hero h1 {
+        font-size: 2.8rem;
+      }
+      header.hero p.subtitle {
+        font-size: 1.2rem;
+      }
+      .btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
+      .testimonial-item {
+        min-height: 160px;
+        flex: 0 0 280px;
+      }
+      .contact-content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-info, .contact-map {
+        flex: 1 1 100%;
+      }
+      .gallery-item {
+        flex: 0 0 240px;
+      }
+      .gallery-slider {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed logo top-right -->
+  <img src="LOGO.jpg" alt="Chhapiya Mineral Water Logo" class="logo-corner" />
+
+  <!-- Hero Section -->
+  <header class="hero" role="banner" aria-label="Introduction to Chhapiya Mineral Water">
+    <h1>Chhapiya Mineral Water</h1>
+    <p class="subtitle">Hydrate Happy, Live Happy &mdash; Purely Refreshing! So, Why Wait?</p>
+    <div class="btn-group">
+      <a href="products.html" class="btn" role="button" aria-label="View our Products">Products</a>
+      <a href="services.html" class="btn" role="button" aria-label="View our Services">Services</a>
+      <a href="career.html" class="btn" role="button" aria-label="View Careers">Career</a>
+      <a href="about.html" class="btn" role="button" aria-label="About Chhapiya">About</a>
+      <a href="contact.html" class="btn" role="button" aria-label="Contact Us">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" aria-label="Customer Testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider" aria-live="polite" aria-atomic="true">
+      <div class="testimonial-track">
+        <article class="testimonial-item" tabindex="0">
+          <p>“Chhapiya Mineral Water is simply the best. Always fresh, pure, and delivered on time!”</p>
+          <h4>— Ramesh Kumar</h4>
+        </article>
+        <article class="testimonial-item" tabindex="0">
+          <p>“I love how eco-friendly their bottles are. Refreshing water with a clear conscience!”</p>
+          <h4>— Anjali Verma</h4>
+        </article>
+        <article class="testimonial-item" tabindex="0">
+          <p>“Great taste and unbeatable quality. My family only drinks Chhapiya now!”</p>
+          <h4>— Sunil Sharma</h4>
+        </article>
+        <article class="testimonial-item" tabindex="0">
+          <p>“Fast delivery and excellent customer support. Highly recommended!”</p>
+          <h4>— Priya Joshi</h4>
+        </article>
+        <article class="testimonial-item" tabindex="0">
+          <p>“Refreshing water and affordable prices. What else do you need?”</p>
+          <h4>— Rajesh Thapa</h4>
+        </article>
+      </div>
+      <div class="testimonial-controls" role="group" aria-label="Testimonial navigation">
+        <button class="testimonial-btn" id="testimonial-prev" aria-label="Previous testimonial">&#8592;</button>
+        <button class="testimonial-btn" id="testimonial-next" aria-label="Next testimonial">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" aria-label="Gallery of Chhapiya Mineral Water products and facilities">
+    <h2>Our Gallery</h2>
+    <div class="gallery-slider" aria-live="polite" aria-atomic="true">
+      <div class="gallery-track">
+        <div class="gallery-item" tabindex="0" aria-label="Image of water bottles on display">
+          <img src="gallery1.jpg" alt="Chhapiya Mineral Water bottles neatly arranged" />
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Image of production facility">
+          <img src="gallery2.jpg" alt="Modern water bottling production facility" />
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Image of delivery truck">
+          <img src="gallery3.jpg" alt="Chhapiya delivery truck on the road" />
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Image of clean mountain spring">
+          <img src="gallery4.jpg" alt="Pure mountain spring water source" />
+        </div>
+        <div class="gallery-item" tabindex="0" aria-label="Image of water quality testing lab">
+          <img src="gallery5.jpg" alt="Water quality testing lab" />
+        </div>
+      </div>
+      <div class="gallery-controls" role="group" aria-label="Gallery navigation">
+        <button class="gallery-btn" id="gallery-prev" aria-label="Previous gallery image">&#8592;</button>
+        <button class="gallery-btn" id="gallery-next" aria-label="Next gallery image">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" aria-label="Contact information and location">
+    <h2>Contact Us</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Reach Out Anytime</h3>
+        <p><strong>Address:</strong> Siyari-03, Rupandehi, Nepal</p>
+        <p><strong>Phone:</strong> <a href="tel:+9779807504245">+977 9807504245</a></p>
+        <p><strong>Email:</strong> <a href="mailto:chhapiyamineralwater@gmail.com">chhapiyamineralwater@gmail.com</a></p>
+        <p><strong>Delivery Coverage:</strong> All over Nepal</p>
+      </div>
+      <div class="contact-map" aria-label="Location map of Chhapiya Mineral Water office">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.8229973239037!2d90.40400931498042!3d23.75088559464029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b58f99f147%3A0xabb88c7c2e1744d8!2sSiyari-03%2C%20Rupandehi!5e0!3m2!1sen!2snp!4v1686675892443!5m2!1sen!2snp"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps location of Siyari-03, Rupandehi, Nepal">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misc Info Section -->
+  <section class="misc" aria-label="Additional information about Chhapiya Mineral Water">
+    <h3>Why Choose Chhapiya Mineral Water?</h3>
+    <p>We are committed to providing the purest mineral water with:</p>
+    <ul>
+      <li>Strict quality control and regular testing</li>
+      <li>Eco-friendly, recyclable packaging</li>
+      <li>Reliable and fast delivery across Nepal</li>
+      <li>Excellent customer service and support</li>
+      <li>Affordable pricing with unmatched quality</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Chhapiya Mineral Water. All rights reserved.
+  </footer>
+
+  <!-- JS for Sliders -->
+  <script>
+    // Testimonials Slider
+    (function(){
+      const track = document.querySelector('.testimonial-track');
+      const prevBtn = document.getElementById('testimonial-prev');
+      const nextBtn = document.getElementById('testimonial-next');
+      const items = document.querySelectorAll('.testimonial-item');
+      const total = items.length;
+      let index = 0;
+
+      function update() {
+        const itemWidth = items[0].offsetWidth + 20; // width + gap
+        track.style.transform = `translateX(${-index * itemWidth}px)`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        update();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % total;
+        update();
+      });
+
+      window.addEventListener('resize', update);
+
+      update();
+    })();
+
+    // Gallery Slider
+    (function(){
+      const track = document.querySelector('.gallery-track');
+      const prevBtn = document.getElementById('gallery-prev');
+      const nextBtn = document.getElementById('gallery-next');
+      const items = document.querySelectorAll('.gallery-item');
+      const total = items.length;
+      let index = 0;
+
+      function update() {
+        const itemWidth = items[0].offsetWidth + 15; // width + gap
+        track.style.transform = `translateX(${-index * itemWidth}px)`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        update();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % total;
+        update();
+      });
+
+      window.addEventListener('resize', update);
+
+      update();
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Chhapiya Mineral Water</title>
+  <style>
+    /* Navigation bar styles */
+    .navbar {
+      background-color: #017575;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .nav-logo {
+      height: 50px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+      font-size: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #aefcff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: #017575;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 160px;
+        padding: 10px;
+        display: none;
+      }
+
+      .nav-container:hover .nav-links {
+        display: flex;
+      }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 70px;
+      background-color: #f0fdfc;
+      color: #004d4d;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #017575;
+    }
+
+    .services-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h3 {
+      color: #017575;
+      margin-top: 0;
+    }
+
+    .footer {
+      background: #017575;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="LOGO.jpg" alt="Chhapiya Logo" class="nav-logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <section class="header">
+    <h1>Our Services</h1>
+    <p>Clean. Safe. Reliable. Delivered to your door.</p>
+  </section>
+
+  <section class="services-section">
+    <div class="service-card">
+      <h3>Home Delivery</h3>
+      <p>We provide door-to-door delivery of mineral water across Nepal, ensuring timely and safe access to pure water.</p>
+    </div>
+    <div class="service-card">
+      <h3>Bulk Supply</h3>
+      <p>Supplying bulk orders for hotels, offices, schools, and other institutions with reliable and hygienic packaging.</p>
+    </div>
+    <div class="service-card">
+      <h3>Event Hydration</h3>
+      <p>Get clean and cool mineral water for your public or private events. We deliver on time and in style.</p>
+    </div>
+    <div class="service-card">
+      <h3>24/7 Customer Support</h3>
+      <p>Contact us anytime for orders, feedback, or emergencies. We're just a call or message away.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>Chhapiya Mineral Water</strong></p>
+    <p>Phone: 9807504245 | Email: chhapiyamineralwater@gmail.com</p>
+    <p>Location: Siyari-03, Rupandehi, Nepal</p>
+    <p>Delivery Available: All Over Nepal</p>
+    <p>&copy; 2025 Chhapiya Mineral Water. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

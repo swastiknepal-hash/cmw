@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products - Chhapiya Mineral Water</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #d0f0f7 0%, #a1d9e8 100%);
+      color: #014d4d;
+      min-height: 100vh;
+      padding-top: 80px; /* for fixed logo */
+    }
+    a {
+      color: #017575;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    /* Fixed Logo top-right */
+    #logo {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      width: 90px;
+      height: 90px;
+      z-index: 1000;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    #logo:hover,
+    #logo:focus {
+      transform: scale(1.1);
+      outline: none;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 0.3em;
+    }
+    header p {
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #034848dd;
+      margin-top: 0;
+    }
+
+    /* Products grid */
+    .products-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .product-card {
+      background: rgba(255 255 255 / 0.85);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgb(1 77 77 / 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover,
+    .product-card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgb(1 77 77 / 0.25);
+      outline: none;
+    }
+    .product-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #017575cc;
+      background-color: #c2e8f2;
+    }
+    .product-content {
+      padding: 18px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 0 8px;
+      color: #014d4d;
+    }
+    .product-desc {
+      font-size: 1rem;
+      color: #055454dd;
+      margin: 0 0 16px;
+      flex-grow: 1;
+    }
+    .product-price {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #017575;
+      margin-bottom: 12px;
+    }
+    .btn-buy {
+      background-color: #017575;
+      border: none;
+      color: white;
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .btn-buy:hover,
+    .btn-buy:focus {
+      background-color: #014d4d;
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 18px 12px;
+      background-color: #017575dd;
+      color: white;
+      font-size: 0.9rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      user-select: none;
+    }
+
+    /* Responsive text scaling */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .product-price {
+        font-size: 1.1rem;
+      }
+      .btn-buy {
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+  <!-- Navbar -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Chhapiya Mineral Water</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Our Products</h1>
+    <p>Pure Mineral Water, Bottled with Care and Quality</p>
+  </header>
+ <!-- Hero Section -->
+ 
+
+  <main class="products-container" aria-label="List of mineral water products">
+    <!-- Example product 1 -->
+    <article class="product-card" tabindex="0">
+      <img src="product1.jpg" alt="Chhapiya Mineral Water 500ml bottle" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 500ml</h2>
+        <p class="product-desc">Perfectly sized for on-the-go hydration, this bottle offers clean and fresh mineral water.</p>
+        <div class="product-price">Rs. 15</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 500ml">Buy Now</button>
+      </div>
+    </article>
+
+    <!-- Example product 2 -->
+    <article class="product-card" tabindex="0">
+      <img src="product2.jpg" alt="Chhapiya Mineral Water 1L bottle" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 1 Liter</h2>
+        <p class="product-desc">Our popular 1L bottle, ideal for family use or office hydration, sealed for freshness.</p>
+        <div class="product-price">Rs. 20</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 1 Liter">Buy Now</button>
+      </div>
+    </article>
+
+    <!-- Example product 3 -->
+    <article class="product-card" tabindex="0">
+      <img src="product3.jpg" alt="Chhapiya Mineral Water 5L jar" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 5 Liter Jar</h2>
+        <p class="product-desc">Bulk water supply with high purity, suitable for homes and offices needing larger quantities.</p>
+        <div class="product-price">Rs. 40</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 5 Liter Jar">Buy Now</button>
+      </div>
+    </article>
+
+  <!-- Example product 4 -->
+    <article class="product-card" tabindex="0">
+      <img src="product4.jpg" alt="Chhapiya Mineral Water 20l jar" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 20 Liter Jar</h2>
+        <p class="product-desc">Bulk water supply with high purity, suitable for homes and offices needing larger quantities.</p>
+        <div class="product-price">Rs. 40</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 20 Liter Jar">Buy Now</button>
+      </div>
+    </article>
+<!-- Example product 5 -->
+    <article class="product-card" tabindex="0">
+      <img src="product5.jpg" alt="Chhapiya Mineral Water 20l with jar" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 20 Liter witth  Jar</h2>
+        <p class="product-desc">Bulk water supply with high purity, suitable for homes and offices needing larger quantities.</p>
+        <div class="product-price">Rs.200</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 20 Liter with Jar">Buy Now</button>
+      </div>
+    </article>
+
+<!-- Example product 6 -->
+    <article class="product-card" tabindex="0">
+      <img src="product6.jpg" alt="Chhapiya Mineral Water 5L with jar" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water - 5 Liter with Jar</h2>
+        <p class="product-desc">Bulk water supply with high purity, suitable for homes and offices needing larger quantities.</p>
+        <div class="product-price">Rs. 100 </div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water 5 Liter with">Buy Now</button>
+      </div>
+    </article>
+ <!-- Example product 7 -->
+    <article class="product-card" tabindex="0">
+      <img src="product7.jpg" alt="Chhapiya Mineral Water 1L*9pcs bottle" class="product-image" />
+      <div class="product-content">
+        <h2 class="product-name">Chhapiya Mineral Water -  1L*9pcs bottle</h2>
+        <p class="product-desc">Our popular 1L bottle, ideal for family use or office hydration, sealed for freshness.</p>
+        <div class="product-price">Rs. 120</div>
+        <button class="btn-buy" aria-label="Buy Chhapiya Mineral Water  1L*9pcs bottler">Buy Now</button>
+      </div>
+    </article>
+
+    
+
+
+
+
+
+
+    <!-- Add more products similarly -->
+  </main>
+
+  <footer>
+    &copy; 2025 Chhapiya Mineral Water. All rights reserved.
+  </footer>
+</body>
+</html>
